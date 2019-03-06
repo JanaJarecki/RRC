@@ -1,0 +1,32 @@
+
+/~$RR_Affect_SPUDM_2017v3.pptx
+
+/data/
+
+/Admin/
+
+Admin/
+
+*.csv
+
+*.docx
+
+*.tmp
+
+# Word temporary
+~$*.doc*
+
+# Word Auto Backup File
+Backup of *.doc*
+
+# Excel temporary
+~$*.xls*
+
+# Excel Backup File
+*.xlk
+
+# PowerPoint temporary
+~$*.ppt*
+
+# Visio autosave temporary files
+*.~vsd*
