@@ -21,9 +21,6 @@ make_labels <- function(x, sep = "\n") {
   return(gsub("_", sep, x))
 }
 
-fit <-  estimateNetwork(d[, c('ret_subj', 'fluct_subj', 'mroi_obj', 'var_obj'), with = F], default = "EBICglasso")
-plot_net(fit, "Risk")
-
 Colors <- c(
   d = "#49494b", l = "#efefef", m = "#737374",
   a1 = "#DE5B6D", a2 = "#ce486c", a3 = "#C39EA0", a4 = "#F8E5E5",
