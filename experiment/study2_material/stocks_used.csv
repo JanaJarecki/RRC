@@ -1,0 +1,21 @@
+#;Country;Index;ISIN;Description (as of 2017)
+1;Europe;ES50 (EuroStoxx50);EU0009658145;The Euro Stoxx 50 is a capital-weighted index that contains the 50 largest companies in Europe
+2;USA;DJIA;US2605661048;Dow Jones Industrial Average (DJIA) contains 30 US-American companies listed at the New York stock exchange
+3;Japan;Nikkei225;JP9010C00002;The Nikkei 225 index (Nikkei, Nikkei Index) is a price-weighted index that contains 225 most liquid companies listed on the Tokyo Stock Exchange.
+4;United Kingdom;FTSE100;GB0001383545;FTSE 100 (FTSE, FTSE 100 Index) contains the 100 highest market-capitalization companies listed on the London Stock Exchange
+5;Switzerland;SMI20;CH0009980894;Swiss Market Index 20 (SMI20, SMI) contains the 20 largest companies in the Swiss Performance Index (SPI) listed on the Swiss stock exchange
+6;Australia;ASX;XC0009693018;Austraia All Ordinaries (All Ords, XAO) contains the 500 largest companies listed in the ASX
+7;Canada;TSX;XC0009695252;S&P/TSX Composite Index contains the 220 largests companies listed on the Toronto Stock Exchange (TSX)
+8;China - Shanghai;SSEC;CNM000000019;Shanghai Stock Exchange Composite Index (SSE Composite) is a capital-weighted index that contains all companies listed on the Shanghai Stock Exchange
+9;Sweden;OMXS30;SE0000337842;OMX Stockholm 30 (OMXS30) contains the 30 most-traded companies listed on the Stockholm Stock Exchange.
+10;Singapore;FSSTI;XC0009653640;Straits Times Index (STI, FSSTI) is a capitalization-weighted index that contains the 30 most liquid companies listed on the Singapore Stock Exchange.
+11;India;BSE;XC0009698199;Bombay Stock Exchange Sensitive Index (S&P BSE SENSEX) is a capitalization-weighted index that contains the 30 most liquid and largest companies listed at the Bombay stock exchange.
+12;Russia;RTSI;RU000A0JPEB3;Russian Trading System Index (RTSI, RTS, RTS Index) is a capitalization-weighted index that contains the 50 most liquid companies listed on the Moscow stock exchange
+13;South Africa;JSE (JALSH);/;The FTSE/JSE All-Share Index (JASH JNB FTSE JSErts Allshare)  contains all companies listed on the Johannesburg Stock Exchange
+14;Turkey;ISE100;TRAIMKB00010;Borsa Istanbul 100 Index (ISE National 100, BIST, BIST Endeks) contains 100 companies listed on the Istanbul Stock Exchange
+15;Poland;WIG20;PL9999999987;Warszaw Indeks Gieldowy (WIG20) is a capital-weighted index that contains the 20 largest companies listed on the Warsaw Stock Exchange.
+16;Argentinia;MERV;ARMERV160025;Merval Buenos Aires (MERV) is a weighted index containint 27 companies listed on the Argentinian Stock Market
+17;Indionesia;IDX;/;The IDX Composite (JSX Composite, Jakarta Composite Index, Indeks Harga Saham Gabungan, IHSG) is a capital-weighted index that contains all stocks listed on the Indonesia Stock Exchange.
+18;Malaysia;KLSE;/;The FTSE Bursa Malaysia KLCI (Kuala Lumpur Composite Index, KLCI, FBMKLCI) is a capitalization-weighted index that contains the 30 largest companies listed on the Malaysian Stock Exchange.
+19;Norway;OBX;NO0007035376;OBX Index (DNB OBX, OBX share index) contains the 25 most actively traded companies listed on the Oslo Stock Exchange over the past six months.
+20;Mexiko;MXX;;MEXICO IPC (MXX) is a capital-weighted index that comprises the 35 biggest companies listed on the Bolsa Mexicana de Valores

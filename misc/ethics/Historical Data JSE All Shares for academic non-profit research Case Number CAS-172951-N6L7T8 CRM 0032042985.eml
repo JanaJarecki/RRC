@@ -1,0 +1,95 @@
+Received: from smtp1-priv.unibas.ch (131.152.227.81) by exch.unibas.ch
+ (131.152.8.132) with Microsoft SMTP Server id 14.3.361.1; Thu, 3 Aug 2017
+ 15:37:33 +0200
+IronPort-PHdr: =?us-ascii?q?9a23=3AA+otwRfNTcYLVfkmRLs3+ZaAlGMj4u6mDksu8pMi?=
+ =?us-ascii?q?zoh2WeGdxcS6YR7h7PlgxGXEQZ/co6odzbGH4+a/Aideu96oizMrSNR0TRgLiM?=
+ =?us-ascii?q?EbzUQLIfWuLgnFFsPsdDEwB89YVVVorDmROElRH9viNRWJ+iXhpTEdFQ/iOgVr?=
+ =?us-ascii?q?O+/7BpDdj9it1+C15pbffxhEiCCzbL52Lxi6twfcu8cZjYZjNKo61wfErGZPd+?=
+ =?us-ascii?q?lK321jOEidnwz75se+/Z5j9zpftvc8/MNeUqv0Yro1Q6VAADspL2466svrtQLe?=
+ =?us-ascii?q?TQSU/XsTTn8WkhtTDAfb6hzxQ4r8vTH7tup53ymaINH2QLUpUjms86tnVBnlgz?=
+ =?us-ascii?q?oJOD4j9GHcl9J+gqRVrhm8oxBz3ZLYbISTOfFjfK3SYMkaSHJBUMhPSiJBHo2y?=
+ =?us-ascii?q?YYgOD+UdMuhXoJLwp0cVohakGQWgGP/jxz1Oi3Tr3aM6yeMhEQTe0QAuHNwAqH?=
+ =?us-ascii?q?TaoszoP6oJTOu7yLTGwzrNY/hL3jrz647Ich4mofyXX7JwatTexVMzGAPClFmR?=
+ =?us-ascii?q?qJbqMiqT2+8QvWab6O9gWviui24hswxxoCOvydk2hobVgYIZ0FHF+j9/zY0oJt?=
+ =?us-ascii?q?O4UFZ2bcOgHZZRrS2WKZZ6T8I4T211uCs3xacKtYOlcCUO0Jgr2gLTZ+aJfoSS?=
+ =?us-ascii?q?4x/vTvudLDR2iX59Zb6yhhK//VK+xuD8WcS4ykhGojBYntTNsH0Gygbd5dKdSv?=
+ =?us-ascii?q?Rn+0eswTaP2B7X6uFDOU00kLDUK58lwrItjJYTs1/DETHslErqi6+abEQl9fKw?=
+ =?us-ascii?q?5+TmZLXpuIOcOpdphgz6M6kigNKzDfk5PwQUQmSW+eux2Kf+8UHnRLhGlvg2nb?=
+ =?us-ascii?q?PYsJDeK8QbvKm5AwpN34gg7Ra/ATCm3c8anXkcMl1JYg6Ij4/zN1DPOv/0Fe2/?=
+ =?us-ascii?q?jEi0kDd32/DGOaXsApfXIXjFirjtZ7R95FRGyAUt0d9f5JNUB6ocIPL1W0/+r8?=
+ =?us-ascii?q?bXDgQjPwOow+a0QOl6g8kcUGSGRK2QKq7Zsl6g++QuKeCXIoQV8n6pKfEj7rjs?=
+ =?us-ascii?q?hGU0klwcVbSv3JEeczazHqI1DV+eZC+mo/EvNi8i9igFYaai3HyEXzl7ZW2/Ga?=
+ =?us-ascii?q?k7oCMyXtH1RbzfT5yg1eTSlBywGYdbMzoeBw=3D=3D?=
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: =?us-ascii?q?A0HTBgDVJoNZh4Ga2MRcHAEBBAEBCgEBF?=
+ =?us-ascii?q?gEBAQMBAQEJAQEBgwKBARBtJwecd4EYmBGCBBwQhRsCGoQjQxQBAQEBAQEBAQE?=
+ =?us-ascii?q?BAQIQAQEBCA0JCCgkC0IOAYFiDCZuMAEBAQEBAQEiAhh8EVcBIgIfBwIEHRMVE?=
+ =?us-ascii?q?QEEG4olCgiseYImi08BAQEBAQUBAQEBAQEBHAWBC4IdgTFRgjSDbjSBPIJ9Eyk?=
+ =?us-ascii?q?VgnwwgjEFn30CHIFUA4EUgkeIEoZLDIIDhViDeIZpE5VuNoEshngEJYFOQDYBh?=
+ =?us-ascii?q?U+BRYEygQ8BAQE?=
+X-IPAS-Result: =?us-ascii?q?A0HTBgDVJoNZh4Ga2MRcHAEBBAEBCgEBFgEBAQMBAQEJAQE?=
+ =?us-ascii?q?BgwKBARBtJwecd4EYmBGCBBwQhRsCGoQjQxQBAQEBAQEBAQEBAQIQAQEBCA0JC?=
+ =?us-ascii?q?CgkC0IOAYFiDCZuMAEBAQEBAQEiAhh8EVcBIgIfBwIEHRMVEQEEG4olCgiseYI?=
+ =?us-ascii?q?mi08BAQEBAQUBAQEBAQEBHAWBC4IdgTFRgjSDbjSBPIJ9EykVgnwwgjEFn30CH?=
+ =?us-ascii?q?IFUA4EUgkeIEoZLDIIDhViDeIZpE5VuNoEshngEJYFOQDYBhU+BRYEygQ8BAQE?=
+X-IronPort-AV: E=Sophos;i="5.41,316,1498514400"; 
+   d="scan'208";a="14525188"
+Received: from mail1.jse.co.za ([196.216.154.129])  by smtp1-pub.unibas.ch
+ with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384; 03 Aug 2017 15:37:25 +0200
+Received: from VYDCCAS02.jse.co.za (unknown [10.3.4.104])	by Websense Email
+ with ESMTPS id 5F43C4865A7C7	for <jana.jarecki@unibas.ch>; Thu,  3 Aug 2017
+ 15:38:01 +0200 (SAST)
+Received: from VYDCMBX02.jse.co.za ([169.254.2.16]) by VYDCCAS02.jse.co.za
+ ([::1]) with mapi id 14.03.0319.002; Thu, 3 Aug 2017 15:37:22 +0200
+From: "INFO @ JSE" <Info@jse.co.za>
+To: "jana.jarecki@unibas.ch" <jana.jarecki@unibas.ch>
+Subject: Historical Data JSE All Shares for academic non-profit research
+ Case Number:CAS-172951-N6L7T8 CRM:0032042985
+Thread-Topic: Historical Data JSE All Shares for academic non-profit
+ research Case Number:CAS-172951-N6L7T8 CRM:0032042985
+Thread-Index: AcwlpkYwWUtzqdLjbk8SjpnTDF2h4w==
+Date: Thu, 3 Aug 2017 13:37:21 +0000
+Message-ID: <EAB25FDEAF7143A6B1E2A1B2404CAA041D30C5DA1E3B@INFO.JSE.CO.ZA>
+Accept-Language: en-US, en-ZA
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.3.6.183]
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+Return-Path: Info@jse.co.za
+X-MS-Exchange-Organization-AuthSource: URZ-HT-CAS-2.urz.unibas.ch
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AVStamp-Mailbox: SYMANTEC;559023360;0;info
+MIME-Version: 1.0
+
+R29vZCBEYXkNCg0KDQoNClRoYW5rIHlvdSBmb3IgeW91ciBlLW1haWwuDQoNClRoaXMgaXMgYW4g
+YXV0b21hdGVkIHJlcGx5IGZyb20gdGhlIEpTRS4gIFlvdXIgZW5xdWlyeS9yZXF1ZXN0IENBUy0x
+NzI5NTEtTjZMN1Q44oCJaGFzIGJlZW4gYWxsb2NhdGVkIHRvIFdlbGNvbWUgVHNoYWJhbGFsYeKA
+iS4NCg0KSWYgeW91IHdpc2ggdG8gZm9sbG93IHVwIG9uIHlvdXIgcmVxdWVzdCwga2luZGx5IHF1
+b3RlIHRoZSByZWYgbnVtYmVyIGluIHRoZSBzdWJqZWN0IGxpbmUuIFRoaXMgd2lsbCBlbmFibGUg
+dGhlIHN5c3RlbSB0byB0cmFjayB5b3VyIGNhc2UgYXV0b21hdGljYWxseS4NCg0KDQoNClBsZWFz
+ZSBub3RlIHRoZSBKU0UgQ2FsbCBDZW50cmUgb3BlcmF0aW5nIGhvdXJzIGFyZSBNb25kYXkgdG8g
+RnJpZGF5IGZyb20gNy0wMGFtIOKAkyA1LTMwcG0uDQoNCg0KDQpLaW5kIFJlZ2FyZHMsDQoNCg0K
+DQpKU0UgQ2FsbCBDZW50cmUNCg0KSm9oYW5uZXNidXJnIFN0b2NrIEV4Y2hhbmdlDQoNCg0KDQpU
+DQoNCg0KKzI3MTEgNTIwIDcwMDANCg0KDQoNCg0KDQoNCltodHRwczovL3d3dy5qc2UuY28uemEv
+UHVibGlzaGluZ0ltYWdlcy9DUk0vSlNFRm9vdGVyLmpwZ10NCg0KDQoNCg0KVGhlIHZpZXdzIGFu
+ZCBvcGluaW9ucyBleHByZXNzZWQgaW4gdGhpcyBtZXNzYWdlIGFyZSB0aG9zZSBvZg0KdGhlIGlu
+ZGl2aWR1YWwgc2VuZGVyIG9mIHRoaXMgbWVzc2FnZSBhbmQgZG8gbm90IG5lY2Vzc2FyaWx5DQpy
+ZXByZXNlbnQgdGhlIHZpZXdzIGFuZCBvcGluaW9ucyBvZiB0aGUgSlNFLiBDb25zZXF1ZW50bHks
+IHRoZQ0KSlNFIGRvZXMgbm90IGFjY2VwdCByZXNwb25zaWJpbGl0eSBmb3Igc3VjaCB2aWV3cyBh
+bmQgb3BpbmlvbnMgDQphbmQgdGhpcyBtZXNzYWdlIHNob3VsZCBub3QgYmUgcmVhZCBhcyByZXBy
+ZXNlbnRpbmcgdGhlIHZpZXdzIA0KYW5kIG9waW5pb25zIG9mIHRoZSBKU0Ugb3IgY29uc3RpdHV0
+ZSBiaW5kaW5nIHRlcm1zIGFuZCBjb25kaXRpb25zIA0Kd2l0aG91dCBzdWJzZXF1ZW50IHdyaXR0
+ZW4gY29uZmlybWF0aW9uIGFuZCBhbiBhdXRob3JpemluZyByZXNvbHV0aW9uIA0Kd2hlcmUgcmVx
+dWlyZWQuIEVhY2ggcGFnZSBhdHRhY2hlZCBoZXJldG8gbXVzdCBhbHNvIGJlIHJlYWQgaW4gY29u
+anVuY3Rpb24gDQp3aXRoIHRoaXMgZGlzY2xhaW1lciBhbmQgc2hvdWxkIGFueSBwYXJ0IG9mIHRo
+aXMgbWVzc2FnZSBiZSB1bmNsZWFyLCB0aGUgDQppc3N1ZSBzaG91bGQgYmUgY2xhcmlmaWVkIHdp
+dGggdGhlIENvbXBhbnkgU2VjcmV0YXJ5IG9mIHRoZSBKU0UuDQoNCkNvbmZpZGVudGlhbGl0eSBu
+b3RlOiBUaGUgbWVzc2FnZSBpcyBpbnRlbmRlZCBmb3IgdGhlIGFkZHJlc3NlZSBvbmx5LiANCklm
+IHlvdSBhcmUgbm90IHRoZSBpbnRlbmRlZCByZWNpcGllbnQgb2YgdGhpcyBtZXNzYWdlLCB5b3Ug
+YXJlIG5vdGlmaWVkIA0KdGhhdCBhbnkgZGlzdHJpYnV0aW9uLCB1c2Ugb2Ygb3IgY29weWluZyBv
+ZiB0aGlzIGNvbW11bmljYXRpb24gaXMgc3RyaWN0bHkgDQpwcm9oaWJpdGVkLiBJZiB5b3UgaGF2
+ZSByZWNlaXZlZCB0aGUgY29tbXVuaWNhdGlvbiBpbiBlcnJvciwgcGxlYXNlIG5vdGlmeSANCnRo
+ZSBzZW5kZXIgaW1tZWRpYXRlbHkuDQoNCkpTRSBMaW1pdGVkLCBSZWcuIE5vLiAyMDA1LzAyMjkz
+OS8wNg0K
