@@ -1,0 +1,143 @@
+\documentclass[a4paper,doc, natbib]{apa6} %apa6/jou/man/doc
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{booktabs} %booktabs package makes nice tables!
+\usepackage{url}
+\usepackage{rotating}
+\usepackage[toc,page]{appendix}
+\usepackage{color}
+\usepackage{subscript}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage{longtable}
+\usepackage{times}
+\usepackage{lipsum}
+
+\title{Paper needs a title}
+\shorttitle{Paper needs a subtitle}
+
+\author{Author one\\Author two\\Author three}
+\affiliation{University of Basel}
+
+\leftheader{XXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXX}
+
+\abstract{
+\lipsum[1]
+}
+\keywords{Affect heuristic, risk--return belief, stock market}
+
+\authornote{%This research is supported by a grant (SNF \# 143854) of the Swiss National Science Foundation to the second and third author.
+
+%Correspondence concerning this article should be addressed to Janine Christin Hoffart. University of Basel, Department of Psychology, Missionsstrasse 62a, 4055 Basel, Switzerland.  E-mail: janine.hoffart@unibas.ch
+}
+
+\begin{document}
+\maketitle
+\section{Introduction}
+In life, larger returns are typically associated with larger risks. Here, the return describes the expected outcome value of an option and the risk relates to the variance of possible outcomes. The concept of a positive correlation between risk and returns is fundamental to finance and forms the basis of \citeauthor{Markowitz1952}'s (\citeyear{Markowitz1952}) mean variance model. The model assumes that investors face trade-offs between the expected returns of an investment and their risks, measured in terms of outcome variance. To date, risk--return models have been applied widely \citep[e.g.,][]{Weber2008, Mohr2010a} and shown to predict behavioural as well as neural data \citep{Mohr2010a}. \cite{Sunden1998} have reported that people understand the risk--return trade--off and use it to inform investment decisions.
+
+
+Contrarily to the widely accepted notion that risks and returns are positively correlated (but see for a challenge of this notion CITATION), people often seem to neglect this regularity when they judge the risks and expected returns of options. Often, they judge options with high returns as less risky than options with lower returns (CITATIONS). One common explanation for this finding is that people heuristically use their affective attitudes towards options to infer risks and returns (CITATION). As a consequence, options that trigger positive affects are perceived as less risky and more profitable than options that trigger negative affects (CITATION). 
+The aim of this paper is twofold. First, we review commonly used risk measures and test them empirically. Second, we will study whether a representative sample of Swiss citizens relies on its affect when judging risks and returns of stocks.
+
+\subsection{The affect heuristic and people's perception of risks and returns}
+Several studies have suggested that people systematically believe that larger returns are associated with lower risks than smaller returns \citep[e.g.][]{Shefrin2001}. This belief contracts the objective relationship between risks and returns. Cognitive biases have been proposed as explanation for the mismatch between people's assumption of a negative risk--return correlation and the objective positive risk--return correlation. \cite{Shefrin2001} has proposed the representative heuristic as explanation for people's  biased risk--return representation. He argued that people judge companies with regards to how \textit{good} they are. If a company is perceived as a \textit{good} company, it's stocks will be associated with high future returns and safety. \cite{Kempf2014} have experimentally shown that people's affective attitude towards companies indeed predict how people judge the risks and future returns of these companies. Positive affective attitudes towards companies were related to low risk judgments and high return judgments. Negative affective attitudes on the other hand were related with high risk judgments and low return judgments. This \textit{affect-heuristic} 
+
+
+
+
+
+
+
+\subsubsection{Measures of risk and methodological limitations}
+
+
+%Recently, also psychologists have started to show interest in the systematic relationship between risks and return. Special interest has been dedicated to studying whether people exploit the risk--return taxonomy to inform decisions. \cite{Weber2005} have demonstrated that, in an experimental setting, participants used information about asset type (i.e., bond vs. stock) to judge expected returns and risks: Bonds were judged as less risky at the costs of lower expected returns. More recently \cite{Pleskac2014} have conducted a large scale analysis of real life risky decision options in every day environments. They found evidence for a positive correlation between risk and return in many domains of real life. Furthermore, they experimentally showed that participants assume a correlation between risk and return when they make probability judgments under uncertainty. 
+
+
+authors do not give definitions for risk and benefit. Make claims that risks and benefits would show a certain correlation and state this as facts. But do not
+\section{Methods}
+\subsection{Participants}
+We recruited 103 (41 female, 62 male) people residing in Germany via ClickWorker, an online crowd-sourcing platform. 
+Before we analysed the data, we excluded the data of $3$ people ($1$ female, $2$ male) who indicated that they did not pay attention during the Study. We further excluded the data of $1$ man who indicated that he did not understand the instructions. The remaining $99$ people were on average $37$ years old ($SD_{age} = 12.2$; $range_{age}: 18 -- 65$). Most people ($93$) indicated that German is their native language, the remaining $6$ people did not specify their native language (Haben OTHER angegeben, das heisst native langugae war nicht im choice set. Naeher beschreiben?!). All participants had a school degree, $40$ people indicated that they went to University and had at least a Bachelor's degree. 
+The study was approved by the ethical committee of the University of Basel. People gave informed consent and were reimbursed for their participation (4.5 Euro roughly \$ 4.83 at the time of the Study).
+
+
+\subsection{Materials and Procedure}
+To create the stimuli, we retrieved a list of the twenty most traded stocks of Switzerland on October 27th 2016 (See appendix). Then, we downloaded the daily start and end share prices of those stocks for January 2001 until December 2015. For one stock (Julius Baer) we only had data starting from 2009. We therefore excluded this stock. For the remaining 19 stocks, we calculated the yearly return of investment and graphically displayed it (See Figure XXX for an overview of the stimuli that we used). Importantly, we did not indicate to which Company individual graphs relate. 
+
+
+\subsubsection{Coding open ended question}
+\begin{itemize}
+\item Three people coded the responses individually, 
+\item Deductive categories
+\item 
+\item 
+\end{itemize}
+
+\section{Results}
+For all following analyses of this manuscript we used the software R \citep{R2014}. 
+\subsection{Which scale measures objective variance best?}
+First, how well responses on the different variance scales measure objective variance. Figure \ref{fig:rsvo} illustrates people's responses to the different response scales as function of objective variances of returns. Higher objective variance was positively correlated with larger perceived fluctuation ($r_{s} = .72, p < .05$); larger perceived variation ($r_{s} = .69, p < .05$) and larger perceived risk ($r_{s} = .49, p < .05$). It was negatively correlated with perceived predictability ($r_{s} = -.55, p < .05$). Next, we repeated the correlation analysis for individual participants. Two people's responses were excluded from this analysis because their responses on at least one scale did not differ between stimuli. Figure \ref{fig:rsvoind} displays correlation coefficients between the objective variance of returns and people's responses to the different responses scales separately per participant. The graph reveals that correlation coefficients for the fluctuation question are most often (XXX of 97 participants) and most strong positively correlated with objective variance. 
+
+\begin{itemize}
+\item Compare sizes of correlation coefficients
+\item 
+\item 
+\end{itemize}
+
+
+\begin{figure}[!htbp] 
+  \centering
+ \fitfigure[]{risksub_varobj.pdf} 
+  \caption{Objective variance of the returns (y--axis) as function of responses on the different scales (x--axis). The dots display individual responses; the dot-size response frequencies.}
+  \label{fig:rsvo}
+\end{figure}
+
+
+\begin{figure}[!htbp] 
+  \centering
+ \fitfigure[]{risksub_varobj_ind.pdf} 
+  \caption{Correlation coefficient (y--axis) for individual participants between objective variance of the returns and responses on different scales (main). The colour of the dots indicate whether the correlation coefficient reached significance (black) based on $p < .05 / (97 * 4)$ or not (grey)}
+  \label{fig:rsvoind}
+\end{figure}
+
+
+\subsection{Does risk scale measure anything beyond variance?}
+As Figure \ref{fig:rsvo} illustrates, the question how risky people perceive the stock based on the shown returns correlates positively with objective variance of the returns. However, the size of the correlation coefficient between responses on the risk scale and objective variance is the lowest of all coefficients. To analyse whether the risk scale measures anything beyond variance, we analysed the responses to the open question at the end of the questionnaire. There, we asked people what they relate to high risk of a stock. XX
+Next, we correlated people's responses on the risk scale with several objective risk measures. Figure XXXXXX displays the results. The Figure indicates that the correlation between subjective risk perception and objective variance is similarly high as the correlation between subjective risk perception and XXXXX. To better understand where on the dimensions \textit{variance} and \textit{loss} the question about risk can be located, we conducted a factor analysis. 
+
+\begin{itemize}
+\item risk subj. has lowest correlation with obj. variance
+\item analyse questions --> indicate that risk is also related to loss
+\item risk subj. correlation with several objective risk measures --> similarly high correlation between some loss measures and risk
+\item factor analysis
+\end{itemize}
+
+
+\subsection{Do people correctly report risk return correlation?}
+\begin{itemize}
+\item objective correlation is positive
+\item people report positive correlation when asked for fluctuation & variability
+\item people report negative correlation when asked for fluctuation & variability
+\item can this be explained because some people talk about somethig loss related? repeat analysis only based on ppl who do not mention losses in open ended questionnaire
+\item factor analysis
+
+\end{itemize}
+
+
+
+
+
+
+\section{Discussion}
+
+\bibliography{refJanine}
+\end{document}
