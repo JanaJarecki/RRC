@@ -1,18 +1,12 @@
 options(warn = -1)
 library(ggplot2)
-if (require(themejj)) {
-  library(themejj)
-  theme_set(themejj())
-} else {
-  library(theme_minimal)
-  theme_set(theme_minimal())
-}
+theme_set(theme_minimal())
 options(warn = 0) # Reset
 
 
 cat('\n')
 make_labels <- function(x, sep = "\n") {
-  x <- gsub("rvar_subj|rv_", "Perceived_Risk (m. as var.)", x)
+  x <- gsub("rvar_subj|rv_", "Perceived_Risk-as-variance", x)
   x <- gsub("ret_subj_z|rt_|ret_subj|Return_z", "Perceived_Return", x)
   x <- gsub("risk_subj|rs_|Risk$", "Perceived_Risk", x)
   x <- gsub("fluct_subj|fl_|Fluctuation", "Perceived_Fluctuation", x)

@@ -21,6 +21,8 @@ d[, ret_subj_z := scale(ret_subj), by=.(id, quest)]
 # -----------------------------------------------------------------------------
 apa_print(d[!duplicated(index), cor.test(var_obj, mroi_obj)])$full_result
 
+
+
 # -----------------------------------------------------------------------------
 # Perceived correlation between risk/variance/fluctuation/predictability and return
 # -----------------------------------------------------------------------------
@@ -129,8 +131,9 @@ source('fig3.R')
 # Extract correlation coefficients
 # ----------------------------------------------------------------------------
 # The table for the supplementary material is in the script
-# xtab2.R
+source('xtab2.R')
 
+# # HOWTO
 # # Extract exact weights and p-values for the partial correlations
 # # For "Peceived Risk"
 # options(scipen = 99)
@@ -141,3 +144,7 @@ source('fig3.R')
 # #   mroi_obj  -0.116         0
 # #   var_obj    0.483         0
 
+lubridate::hm(as.POSIXlt("2019-01-01 01:00:00"))
+ - lubridate::hm(as.POSIXct("2019-01-01 12:00:00"))
+
+hour(as.POSIXct("2019-01-01 01:00")) - hour(as.POSIXct("2019-01-01 22:00"))

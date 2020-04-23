@@ -11,12 +11,10 @@ library(MicroMacroMultilevel) # predict group-level DV from individual-level IV
 z <- FALSE
 
 # Read the data
-d <- fread("../../data/processed/study1.csv", key = 'id', colClasses = list(factor = c('id', 'index')))
-# Mean-center the subjective ratings (1-7 Likert-type scale) 
-vars <- c('fluct_subj','risk_subj','var_subj','pred_subj','ret_subj')
-d[, c(paste0(vars, '_c')) := lapply(.SD, function(x) x-mean(x)), .SDcols = vars, by = id]
-vars <- vars[-5] # delete the return variable
-
+d <- fread("../../data/processed/study1.csv", key = 'id', colClasses = list(factor = c('id', 'index', 'quest'), double = "perceived"))
+# Mean-center the perceived ratings (1-7 Likert-type scale) 
+d[, perceived := perceived - mean(perceived), by = .(id, quest)]
+d[, quest := factor(quest, levels = c("Fluctuation", "Risk", "Variability", "Predictability"))]
 # # z-standardize
 # if (z) {
 #   v <- c(vars, 'ret_subj')
@@ -29,22 +27,18 @@ vars <- vars[-5] # delete the return variable
 # Perceived risk correlated with objective variance
 # ------------------------------------------------------------------------
 m <- ifelse(z, "pearson", "spearman") # correlation method
-round(d[, lapply(.SD, cor, y = var_obj), .SDcols = vars], 2)
-d[, lapply(lapply(.SD, cor.test, y = var_obj), apa_print), .SDcols = vars] # Print for manuscsript
+d[, round(cor(perceived, var_obj), 2), by = .(quest)]
+# Print for manuscsript
+d[, apa_print(cor.test(perceived, var_obj))[[1]], by = .(quest)]
+
+
 
 
 # ------------------------------------------------------------------------
 # Linear mixed-effects modeling
 # ------------------------------------------------------------------------
 # Design: 1 x 4 (question wording) within-subject design
-# Variables:
-#    var_obj: objective variance of stocks (group-level)
-#    xxx_subj_c: subjective ratings (4 per participant)
-# long format data
-dl <- melt(d, id = c('id', 'index','var_obj','mroi_obj','ret_subj'), measure = paste0(vars, '_c'), variable.name = 'question', value.name = 'perception')
-dl[, question := factor(question, levels = paste0(vars, '_c'), labels = c('Fluctuation', 'Risk', 'Variability', 'Predictability'))]
-# Change the coding to effects coding (aka deviance coding)
-contrasts(dl$question) = contr.sum(4) # set contrast coding
+contrasts(d$quest) = contr.sum(4) # set contrast coding
 # Predictability will be left out
 
 # 1. Test which complexity is justified

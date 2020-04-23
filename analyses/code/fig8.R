@@ -8,7 +8,7 @@ plots <- lapply(1:length(corlist_att), function(z) {
     # in other variables!
     , type = "contemporaneous" 
     , mlvar = TRUE
-    , Title = gsub("Riskvar", "Risk (m. as var.)", gsub("_Graph_TRUE", "",  gsub("_Graph_FALSE", " ", paste0(letters[z], ". ", names(corlist_att)[z]))))
+    , Title = gsub("Riskvar", "Risk-as-var", gsub("_Graph_TRUE", "",  gsub("_Graph_FALSE", " ", paste0(letters[z], ". ", names(corlist_att)[z]))))
     , alpha = alpha)})
 ngraph <- d[, length(unique(id)), by = graph]$V1 # Number of subjects
 
@@ -16,7 +16,7 @@ ngraph <- d[, length(unique(id)), by = graph]$V1 # Number of subjects
 png(paste0('../figures/fig8.png'), width = 1300, height = 1000, units = "px", res = 220, pointsize = 10)
 plot.new()
 layout(mat = matrix(c(1,2,3,7,7,7,4,5,6), 3, byr=T), heights = c(4, 1, 4))
-par(family = "Roboto Condensed", oma = c(1, 0, 2.5, 0))
+par(family = "Roboto Condensed", oma = c(1, 0, 1.5, 0))
 for (i in 1:3) {
   plot(plots[[i]], oma=c(7,25,7,25))
 }

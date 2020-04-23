@@ -7,7 +7,7 @@ index_abbreviations <- matrix( c(
      "ASX"          , "^AORD",    8313426, "INDEXASX:XAO",
      "BSE"          , "^BSESN",   8313421, "INDEXBOM:SENSEX",
      "DAXK"         , "^GDAXIP",  1966970, "INDEXDB:DAXK",        
-     "DJAI"         , "^DJI",     324977 , "NYSEARCA:DIA",   
+     "DJIA"         , "^DJI",     324977 , "NYSEARCA:DIA",   
      "EuroStoxx50"  , "XSSX.MI",  193736 , "TLV:INDEU.11" ,      
      "FSSTI"        , "^STI",     8313425, "INDEXFTSE:WISGP",
      "FTSE100"      , "^FTSE",    1918069, "INDEXFTSE:UKX",     
@@ -28,7 +28,7 @@ index_abbreviations <- matrix( c(
       "MXX"         , NA,         8313319,   NA),
      nrow = 22, byrow = T, dimnames = list(NULL,c("original", "yahoo","onvista", "google")))
 index_abbreviations
-write.table(index_abbreviations, "../4-Data/international_acronyms.csv", row.names=FALSE)
+write.table(index_abbreviations, "../../data/raw/nternational_acronyms.csv", row.names=FALSE)
 
 ### Get data from YAHOO
 dt <- pdfetch_YAHOO(na.omit(index_abbreviations[, "yahoo"]), fields = c("open", "high", "low", "close"), from = start, to = end, interval = "1d")
@@ -44,8 +44,7 @@ dt <- dcast(longdt, V1 + yahoo ~ column, value.var = "values")
 setnames(dt, "V1", "date")
 
 # Rename the yahoo ids to standard index names
-rename <- function(name, n, mat = index_abbreviations)
-{
+rename <- function(name, n, mat = index_abbreviations) {
     idx <- apply(mat[,n,drop=F], 2, function(x) which(x==name))
     return(unname(mat[idx,1]))
 }
@@ -275,56 +274,57 @@ write.table(google, "../4-Data/internatinal_stocks_google.csv", sep = ";", row.n
 
 # #######################################################################
 # # Calculate the ROI
-# library(lubridate) # for working with date/time nicely
-# library(fasttime) # for fast conversion into time-format
+library(lubridate) # for working with date/time nicely
+library(fasttime) # for fast conversion into time-format
 
 # # load data
-# d <- fread("../4-Data/international_stocks.csv")
+d <- fread("../../data/study2_stocks/international_stocks.csv")
 
-# # reformat variables
-# d[, date := as.Date(date)] # char to time format
+# reformat variables
+d[, date := as.Date(date)] # char to time format
+
+# # Calculate ROI for the specified value between each date in dateVector and the targetdate. If the targetdate is not a sales date (i.e. does not exist in dateVector) one day later than targetdate is used as sales date, if that does not exist, another day later is used, etc.
+getValue <- function(value, dateVector, targetdate)
+{
+    # returns the value 'value' on the day targetdate. If dateVector contains the targetdate, value at the targetdate is returned. If targetdate does not exist in dateVector (targetdate is a Sunday or holiday), then return the closest value for the next AFTER targetdate in dateVector.
+
+    dateVector <- trunc(dateVector, "day")
+    targetdate <- trunc(targetdate, "day")
+
+    if (max(dateVector) < targetdate)
+    {
+        return(NA)
+    }
+
+    if (sum(dateVector == targetdate) == 0)
+    {
+        out <- getValue(value, dateVector, targetdate = as.Date(targetdate) + days(1))
+    }
+    else {
+        out <- value[dateVector == targetdate]        
+    }
+    return(out)
+}
 
 
-# # # Calculate ROI for the specified value between each date in dateVector and the targetdate. If the targetdate is not a sales date (i.e. does not exist in dateVector) one day later than targetdate is used as sales date, if that does not exist, another day later is used, etc.
-# getValue <- function(value, dateVector, targetdate)
-# {
-#     # returns the value 'value' on the day targetdate. If dateVector contains the targetdate, value at the targetdate is returned. If targetdate does not exist in dateVector (targetdate is a Sunday or holiday), then return the closest value for the next AFTER targetdate in dateVector.
+getROI <- function(buy, sell)
+{
+    out <- (sell - buy) / buy
+    return(out)
+}
+getROI <- Vectorize(getROI)
 
-#     dateVector <- trunc(dateVector, "day")
-#     targetdate <- trunc(targetdate, "day")
+# Time difference
+d[, plus1year := date %m+% years(1), by = date]
+nrow(d[end<0]) # 0
 
-#     if (max(dateVector) < targetdate)
-#     {
-#         return(NA)
-#     }
+# Checks
+d[, as.list(range(plus1year)), by = index]
 
-#     if (sum(dateVector == targetdate) == 0)
-#     {
-#         out <- getValue(value, dateVector, targetdate = as.Date(targetdate) + days(1))
-#     }
-#     else {
-#         out <- value[dateVector == targetdate]        
-#     }
-#     return(out)
-# }
+# ROI
+d[, ROIyearly := getROI(end, sapply(plus1year, function(x) getValue(end, as.Date(date), x))), by = index]
 
+# Save
+write.table(d, file = "../../study2_stocks/_roi.csv", row.names=FALSE, sep=";")
 
-# getROI <- function(buy, sell)
-# {
-#     out <- (sell - buy) / buy
-#     return(out)
-# }
-# getROI <- Vectorize(getROI)
-
-# # Time difference
-# d[, plus1year := date %m+% years(1), by = date]
-# nrow(d[end<0]) # 0
-
-# # Checks
-# d[, range(plus1year), by = index]
-
-# # ROI
-# d[, ROIyearly := getROI(end, sapply(plus1year, function(x) getValue(end, as.Date(date), x))), by = index]
-
-# # Save
-# write.table(d, file = "../4-Data/international_stocks_ROI.csv", row.names=FALSE, sep=";")######################################################################
+######################################################################

@@ -75,6 +75,20 @@ apa_table(
   col.names = c('Graph', 'Question wording', 'Correlation (95% CI)', 'Statistic'),
   escape = FALSE)
 
+
+# -----------------------------------------------------------------------------
+# Correlation between the with-graph and without-graph fluctuation judgments
+# -----------------------------------------------------------------------------
+d[quest == "fluctuation", mean(perception), by = .(graph, index)][, dcast(.SD, index ~ graph)][, cor(`FALSE`, `TRUE`)]
+d[quest == "fluctuation", mean(ret_subj), by = .(graph, index)][, dcast(.SD, index ~ graph)][, cor(`FALSE`, `TRUE`)]
+
+d[quest == "risk", mean(perception), by = .(graph, index)][, dcast(.SD, index ~ graph)][, cor(`FALSE`, `TRUE`)]
+d[quest == "risk", mean(ret_subj), by = .(graph, index)][, dcast(.SD, index ~ graph)][, cor(`FALSE`, `TRUE`)]
+
+d[quest == "risk (variance)", mean(ret_subj), by = .(graph, index)][, dcast(.SD, index ~ graph)][, cor(`FALSE`, `TRUE`)]
+
+
+
 # -----------------------------------------------------------------------------
 # Controling for clusters, generalized linear mixed models
 # -----------------------------------------------------------------------------

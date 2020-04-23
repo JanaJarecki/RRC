@@ -24,3 +24,6 @@ apa_table(tablist
   , escape = F
   , merge_method = 'indent'
   )
+
+# '../tables/stab2.tex'
+

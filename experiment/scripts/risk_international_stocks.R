@@ -1,18 +1,14 @@
 library(data.table)
-library(ggplot2)
-library(themejj); theme_set(themejj())
-library(ggsavejj)
 library(fasttime)
 library(lubridate)
 
-
-d <- fread("../4-Data/international_stocks_ROI.csv")
+d <- fread("../../data/stockmarket_study2_international/international_stocks_ROI.csv")
 d[, date := as.Date(date)]
 setkey(d, index, date)
 
 # helper variables
 indices <- d[, unique(index)]
-from <- 2009
+from <- 2007
 to <- 2015
 d <- d[year(date) >= from & year(date) <= to]
 d[, year := year(date)]

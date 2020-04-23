@@ -13,9 +13,6 @@ source('utils.R')
 # Read the data
 d <- fread('../../data/processed/study2.csv', 
   colClasses = list(factor = c('id', 'index')))
-# Compute affect score
-d[, affect_aktiv_subj := 6-affect_aktiv_subj] # TODO CHEK
-d[, affect_mw := rowMeans(cbind(affect_gut_subj, affect_interessant_subj, affect_stark_subj, affect_aktiv_subj))]
 # Scale the subjective ratings (1-7 likert) and affect (1-5 likert)
 d[, risk_subj_c := risk_subj - 4]
 d[, ret_subj_c := ret_subj - 4]
@@ -31,14 +28,11 @@ if (z) {
 
 
 # -----------------------------------------------------------------------------
-# Attitude score
+# Familiarity
 # -----------------------------------------------------------------------------
-# Cronbach's alpha
-alpha_by_index <- d[, as.list(summary(psych::alpha(cbind(.SD)))), .SDcols = c('affect_gut_subj', 'affect_interessant_subj','affect_stark_subj','affect_aktiv_subj'), by = index]
-summary(alpha_by_index$raw_alpha, digits = 2)
-# Descriptive statistics
-d[, as.list(round(describe(affect_mw),2))][, c('median', 'mean', 'sd', 'min', 'max')]
-d[, mean(affect_mw), by = country][V1 %in% range(V1)]
+# How well do you know the index? (1=not at all, 3=medium, 7=very well)
+d[, as.list(round(describe(knowledge_index_subj),2))][, c('median', 'mean', 'sd', 'min', 'max')]
+d[, mean(knowledge_index_subj), by = .(index, country)][V1 %in% range(V1)]
 
 
 # -----------------------------------------------------------------------------

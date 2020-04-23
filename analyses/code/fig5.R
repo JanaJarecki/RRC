@@ -18,5 +18,5 @@ for (i in 4:6) {
     plot(plots[[i]], oma=c(0,25,10,25))
 }
 title(paste0("Graph (n=", ngraph[1], ")"), outer=TRUE, cex.main = 1.8, family = "Roboto Condensed", font = 2, adj = 0)
-mtext(paste0("Without Graph (n=", ngraph[2], ")"), side = 3, line = -21, outer = TRUE, cex = 1.15, family = "Roboto Condensed", font = 2, adj = 0)
+mtext(paste0("No Graph (n=", ngraph[2], ")"), side = 3, line = -21, outer = TRUE, cex = 1.15, family = "Roboto Condensed", font = 2, adj = 0)
 dev.off()
